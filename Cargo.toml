@@ -22,8 +22,10 @@ use-serde = ["serde", "bitcoin_hashes/serde"]
 [dependencies]
 bitcoin-bech32 = "0.9.0"
 byteorder = "1.2"
-bitcoin_hashes = "0.7"
+bitcoin_hashes = "0.7.0"
 bitcoinconsensus = { version = "0.16", optional = true }
+secp256k1 = { package = "secp256k1-pure-rust", git = "https://github.com/LightningPeach/secp256k1-wrapper" }
+
 
 [dependencies.serde]
 version = "1"
@@ -33,9 +35,6 @@ optional = true
 [dependencies.hex]
 version = "=0.3.2"
 
-[dependencies.secp256k1]
-version = "0.12"
-features = [ "rand" ]
 
 [dev-dependencies]
 serde_derive = "1"
